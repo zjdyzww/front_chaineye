@@ -4,7 +4,7 @@ import { notification } from 'antd';
 import { UpdateAccessToken } from '@/services/login';
 
 // 请求后端接口 统一前缀
-const backendBaseUrl = ''
+const backendBaseUrl = '/chaineye'
 
 /** 异常处理程序，所有的error都被这里处理，页面无法感知具体error */
 const errorHandler = (error: Error): Response => {
@@ -34,7 +34,8 @@ request.interceptors.request.use((url, options) => {
   let headers = {
     ...options.headers,
   };
-  headers['Authorization'] = `Bearer ${localStorage.getItem('access_token') || ''}`;
+  // headers['Authorization'] = `Bearer ${localStorage.getItem('access_token') || ''}`;
+  headers['jwttoken'] = `${localStorage.getItem('token') || ''}`;
   if (!headers['X-Cluster']) {
     headers['X-Cluster'] = localStorage.getItem('curCluster') || '';
   }

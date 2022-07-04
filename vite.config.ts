@@ -56,7 +56,7 @@ export default defineConfig({
     // visualizer()
   ],
   // 静态资源 js 加载前缀
-  base: "",
+  base: "/front_chaineye",
   define: {},
   resolve: {
     alias: [
