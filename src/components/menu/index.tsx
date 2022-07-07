@@ -70,6 +70,10 @@ const SideMenu: FC = () => {
           key: import.meta.env.VITE_PREFIX + '/targets',
           title: t('对象列表'),
         },
+        {
+          key: import.meta.env.VITE_PREFIX + '/brower',
+          title: t('区块链浏览器'),
+        },
       ],
     },
     {
@@ -230,7 +234,7 @@ const SideMenu: FC = () => {
 
   return hideSideMenu() ? null : (
     <div
-      className={`${showMenu=='true' ? 'display_flex' : 'display_n'}`}
+      // className={`${showMenu=='true' ? 'display_flex' : 'display_n'}`}
       style={{
         flexDirection: 'column',
         padding: '10px 0 10px 10px',

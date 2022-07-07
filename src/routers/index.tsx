@@ -59,6 +59,7 @@ import TaskDetail from '@/pages/task/detail';
 import Version from '@/pages/help/version';
 import Contact from '@/pages/help/contact';
 import Migrate from '@/pages/help/migrate';
+import Brower from '@/pages/brower/index';
 
 import { dynamicPackages, Entry } from '@/utils';
 
@@ -145,6 +146,7 @@ export default function Content() {
         <Route exact path={prefixUrl + '/help/version'} component={Version} />
         <Route exact path={prefixUrl + '/help/contact'} component={Contact} />
         <Route exact path={prefixUrl + '/help/migrate'} component={Migrate} />
+        <Route exact path={prefixUrl + '/brower'} component={Brower} />
 
         {lazyRoutes.map((route, i) => (
           <RouteWithSubRoutes key={i} {...route} />

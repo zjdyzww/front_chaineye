@@ -69,8 +69,8 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/api/n9e': {
-        target: 'http://10.206.0.11:8765/',
+      '/api/n9e/': {
+        target: 'http://192.168.1.120:18000/',
         changeOrigin: true,
       },
       '/api/v1/': {

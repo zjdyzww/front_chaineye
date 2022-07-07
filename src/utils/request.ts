@@ -52,6 +52,8 @@ request.interceptors.request.use((url, options) => {
 request.interceptors.response.use(
   async (response, options) => {
     const { status } = response;
+    console.log(response,options);
+    debugger
 
     if (status === 200) {
       return response
