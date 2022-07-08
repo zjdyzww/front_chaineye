@@ -4,6 +4,9 @@
 ## 项目路径
 项目路径： [front-chaineye](https://github.com/shengjian-tech/front_chaineye).
 
+## 预览
+<img src="overview.png" width="500">
+
 ## 环境准备
 
 ```
