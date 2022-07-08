@@ -34,8 +34,8 @@ request.interceptors.request.use((url, options) => {
   let headers = {
     ...options.headers,
   };
-  // headers['Authorization'] = `Bearer ${localStorage.getItem('access_token') || ''}`;
-  headers['jwttoken'] = `${localStorage.getItem('token') || ''}`;
+  headers['Authorization'] = `Bearer ${localStorage.getItem('access_token') || ''}`;
+  // headers['jwttoken'] = `${localStorage.getItem('token') || ''}`;
   if (!headers['X-Cluster']) {
     headers['X-Cluster'] = localStorage.getItem('curCluster') || '';
   }
