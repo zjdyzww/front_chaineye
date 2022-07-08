@@ -156,13 +156,15 @@ export default class brower extends Component {
                                             result.transaction.to_addresses.map((items) => {
                                                 return (
                                                     <Row gutter={16} className='CardgutterRow'>
-                                                        <Col span={12}>
+                                                        <Col span={11}>
                                                             <Card bordered={false} className='Cardgutter'>
                                                                 <p className="block"><span>发起方</span>{result.transaction.from_address ? result.transaction.from_address : ""}</p>
                                                             </Card>
                                                         </Col>
-                                                        <RightOutlined className='RightOutlined' />
-                                                        <Col span={12}>
+                                                        <Col span={2}>
+                                                            <RightOutlined className='RightOutlined' />
+                                                        </Col>
+                                                        <Col span={11}>
                                                             <Card bordered={false} className='Cardgutter'>
                                                                 <p className="block toblock"><span>接收方</span>{items}</p>
                                                             </Card>
