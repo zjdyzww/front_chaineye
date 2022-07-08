@@ -161,7 +161,7 @@ export default class brower extends Component {
                                                                 <p className="block"><span>发起方</span>{result.transaction.from_address ? result.transaction.from_address : ""}</p>
                                                             </Card>
                                                         </Col>
-                                                        <Col span={2}>
+                                                        <Col span={2} className="colrightoutline">
                                                             <RightOutlined className='RightOutlined' />
                                                         </Col>
                                                         <Col span={11}>
