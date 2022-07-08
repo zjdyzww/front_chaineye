@@ -242,7 +242,7 @@ const SideMenu: FC = () => {
     >
       <div className={`home ${collapsed ? 'collapse' : ''}`}>
         <div className='name' onClick={() => history.push(import.meta.env.VITE_PREFIX + '/metric/explorer')} key='overview'>
-          <img src={collapsed ? import.meta.env.VITE_PREFIX + '/image/logo.svg' : import.meta.env.VITE_PREFIX + '/image/logo-l(1).svg'} alt='' className='logo' />
+          <img src={import.meta.env.VITE_PREFIX + '/image/logo.png'} alt='' className='logo' />
         </div>
       </div>
 

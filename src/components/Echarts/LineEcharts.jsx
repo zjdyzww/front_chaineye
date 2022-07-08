@@ -34,7 +34,7 @@ export default class LineEcharts extends Component {
                 axisPointer: {
                     type: 'cross',
                     label: {
-                        show: false
+                        show: true
                     }
                 },
                 formatter: '{b}<br/>交易数：{c}',
@@ -42,7 +42,6 @@ export default class LineEcharts extends Component {
             },
             xAxis: {
                 data: data.x,
-                boundaryGap: true,
                 axisTick: {
                     alignWithLabel: true
                 }
