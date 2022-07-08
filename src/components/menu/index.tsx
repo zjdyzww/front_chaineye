@@ -234,7 +234,7 @@ const SideMenu: FC = () => {
 
   return hideSideMenu() ? null : (
     <div
-      // className={`${showMenu=='true' ? 'display_flex' : 'display_n'}`}
+      className={`${showMenu=='true' ? 'display_flex' : 'display_n'}`}
       style={{
         flexDirection: 'column',
         padding: '10px 0 10px 10px',
