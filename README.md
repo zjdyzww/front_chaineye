@@ -52,4 +52,6 @@ server {
 - `vite.config.js` and `tsconfig.json` should both configure to make sure alias works
 - Add `"css.validate": false` in vscode setting.json to ignore the css warning 
 
+## 鸣谢
+[nightingale fe-v5](https://github.com/n9e/fe-v5)
 
