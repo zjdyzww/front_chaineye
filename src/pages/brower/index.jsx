@@ -9,7 +9,7 @@ import './index.less';
 
 const { Header, Footer, Sider, Content } = Layout;
 const { Search } = Input;
-
+let timer = null;
 export default class brower extends Component {
     state = {
         data: {
@@ -23,7 +23,22 @@ export default class brower extends Component {
     componentDidMount() {
         this.getContacrtFunction();
         this.getLineChartFunction();
+        this.func();
     }
+
+    func = () => {
+        let that = this;
+        timer = setInterval(() => {
+            that.getContacrtFunction();
+            that.getLineChartFunction();
+        }, 5000);
+    }
+
+    componentWillUnmount() {
+        clearInterval(timer);
+    }
+
+
 
     getContacrtFunction() {
         request(`/api/n9e/xuperchain/contract/count?chain_name=xuper`, {
