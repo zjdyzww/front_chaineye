@@ -117,7 +117,7 @@ export default defineConfig({
           // modify-end
 
           // 下面是云眼的全局样式
-          'primary-color': '#6C53B1',
+          'primary-color': '#2f54eb',
           'disabled-color': 'rgba(0, 0, 0, 0.5)',
           'tabs-ink-bar-color': 'linear-gradient(to right, #9F4CFC, #0019F4 )',
           'font-size-base': '12px',
@@ -135,12 +135,12 @@ export default defineConfig({
           'table-header-bg': '#f0f0f0',
           // 'collapse-content-bg': '#fff',
           'select-selection-item-bg': '#EAE6F3',
-          'select-selection-item-border-color': '#6C53B1',
+          'select-selection-item-border-color': '#2f54eb',
           'menu-item-color': '#8C8C8C',
           'menu-inline-submenu-bg': '#f0f0f0',
           'menu-bg': '#f0f0f0',
           'checkbox-check-bg': '#fff',
-          'checkbox-check-color': '#6C53B1',
+          'checkbox-check-color': '#2f54eb',
           'checkbox-color': 'fade(@checkbox-check-color, 10)',
           // 'input-bg': '#fff',
           'btn-padding-horizontal-base': '12px',

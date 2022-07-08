@@ -30,18 +30,19 @@ export default class LineEcharts extends Component {
             },
             tooltip: {
                 show: true,
-                trigger: 'axis',
+                trigger: 'none',
                 axisPointer: {
                     type: 'cross',
                     label: {
                         show: false
                     }
                 },
-                formatter: '{b}<br/>汇总：{c}',
+                formatter: '{b}<br/>交易数：{c}',
                 extraCssText: 'box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);'
             },
             xAxis: {
                 data: data.x,
+                boundaryGap: true,
                 axisTick: {
                     alignWithLabel: true
                 }
@@ -63,13 +64,25 @@ export default class LineEcharts extends Component {
                 data: data.y,
                 smooth: false,
                 lineStyle: {
-                    color: '#2d0b90',
-                    width: 2
+                    color: '#2f54eb',
+                    width: 2,
                 },
                 itemStyle: {
-                    color: '#fff',
-                    borderColor: '#000'
-                }
+                    color: '#2f54eb',
+                    borderColor: '#2f54eb'
+                },
+                areaStyle: { //配置渐变色
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                { offset: 0, color: '#2f54eb' }, //顶端颜色
+                                { offset: 0.5, color: '#2f54eb' },  //中间颜色
+                                { offset: 1, color: '#e8f7f4' }  //底部颜色
+                            ]
+                        )
+                    }
+                },
             }]
         }
         myEcharts.setOption(option)
