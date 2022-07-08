@@ -1,8 +1,8 @@
-# Front-ChainEye
+# Front_ChainEye
 链眼(ChainEye) 前端项目
 
 ## 项目路径
-项目路径： [front-chaineye](https://github.com/shengjian-tech/front_chaineye).
+项目路径： [front_chaineye](https://github.com/shengjian-tech/front_chaineye).
 
 ## 预览
 <img src="overview.png" width="500">
