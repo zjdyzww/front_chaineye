@@ -31,7 +31,7 @@ export default class brower extends Component {
         timer = setInterval(() => {
             that.getContacrtFunction();
             that.getLineChartFunction();
-        }, 5000);
+        }, 3000);
     }
 
     componentWillUnmount() {
