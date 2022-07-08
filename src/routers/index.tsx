@@ -84,7 +84,7 @@ export default function Content() {
   let { profile } = useSelector<RootState, accountStoreState>((state) => state.account);
   const location = useLocation();
   const dispatch = useDispatch();
-  if (!profile.id && location.pathname != '/login' && !location.pathname.startsWith('/callback')) {
+  if (!profile.id && location.pathname != import.meta.env.VITE_PREFIX  + '/login' && !location.pathname.startsWith('/callback')) {
     dispatch({ type: 'common/getClusters' });
     if (
       !location.pathname.startsWith('/chart/') &&
