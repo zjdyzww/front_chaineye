@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Layout, Input, Col, Row, Card } from 'antd'
-import { AudioOutlined } from '@ant-design/icons';
+import { AudioOutlined, RightOutlined } from '@ant-design/icons';
 import LineEcharts from '../../components/Echarts/LineEcharts';
 import request from '@/utils/request';
 import { RequestMethod } from '@/store/common';
@@ -161,9 +161,10 @@ export default class brower extends Component {
                                                                 <p className="block"><span>发起方</span>{result.transaction.from_address ? result.transaction.from_address : ""}</p>
                                                             </Card>
                                                         </Col>
+                                                        <RightOutlined className='RightOutlined' />
                                                         <Col span={12}>
                                                             <Card bordered={false} className='Cardgutter'>
-                                                                <p className="block"><span>接收方</span>{items}</p>
+                                                                <p className="block toblock"><span>接收方</span>{items}</p>
                                                             </Card>
                                                         </Col>
                                                     </Row>
