@@ -61,6 +61,9 @@ import Contact from '@/pages/help/contact';
 import Migrate from '@/pages/help/migrate';
 import Brower from '@/pages/brower/index';
 
+import RecordingRule from '@/pages/recordingRules'
+import RecordingRuleAdd from '@/pages/recordingRules/add'
+import RecordingRuleEdit from '@/pages/recordingRules/edit'
 import { dynamicPackages, Entry } from '@/utils';
 
 const Packages = dynamicPackages();
@@ -125,6 +128,10 @@ export default function Content() {
         <Route exact path={prefixUrl + '/alert-subscribes'} component={Subscribe} />
         <Route exact path={prefixUrl + '/alert-subscribes/add'} component={SubscribeAdd} />
         <Route exact path={prefixUrl + '/alert-subscribes/edit/:id'} component={SubscribeEdit} />
+
+        <Route exact path={prefixUrl + '/recording-rules/:id?'} component={RecordingRule} />
+        <Route exact path={prefixUrl + '/recording-rules/add/:group_id'} component={RecordingRuleAdd} />
+        <Route exact path={prefixUrl + '/recording-rules/edit/:id'} component={RecordingRuleEdit} />
 
         <Route exact path={prefixUrl + '/alert-cur-events'} component={Event} />
         <Route exact path={prefixUrl + '/alert-his-events'} component={historyEvents} />
