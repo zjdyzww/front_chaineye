@@ -106,7 +106,11 @@ const SideMenu: FC = () => {
           title: t('告警规则'),
         },
         {
-          key: import.meta.env.VITE_PREFIX + '/alert-mutes',
+          key:import.meta.env.VITE_PREFIX +  '/recording-rules',
+          title: t('记录规则'),
+        },
+        {
+          key:import.meta.env.VITE_PREFIX +  '/alert-mutes',
           title: t('屏蔽规则'),
         },
         {
