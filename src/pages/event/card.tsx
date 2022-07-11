@@ -125,6 +125,7 @@ function Card(props: Props, ref) {
               type='link'
               onClick={() => {
                 history.push(import.meta.env.VITE_PREFIX + '/alert-mutes/add', {
+                  group_id: record.group_id,
                   cluster: record.cluster,
                   tags: record.tags
                     ? record.tags.map((tag) => {

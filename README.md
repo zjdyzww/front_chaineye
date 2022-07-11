@@ -1,66 +1,57 @@
-# n9e-fe
-This is the web project for N9E
+# Front_ChainEye
+链眼(ChainEye) 前端项目
 
-## Usage
-The built pub folder can work in the [n9e](https://github.com/didi/nightingale).
+## 项目路径
+项目路径： [front_chaineye](https://github.com/shengjian-tech/front_chaineye).
 
-you can deploy the front-end code independently, just replace the pub with the new release.
+## 预览
+<img src="overview.png" width="500">
 
-
-## Dependencies
+## 环境准备
 
 ```
 node: v16.13.0
 npm: 8.1.0
 ```
-The lower version maybe works, I am not sure.
-
-## Installation
+## 依赖安装
 
 ```
 npm install
 ```
-
-## Start
-
-```
-npm run dev
-```
-The back-end api proxy config is https://github.com/n9e/fe-v5/blob/master/vite.config.ts#L45
-## Build
+## 打包
 
 ```
 npm run build
 ```
 
-## Branch and Version
-
-The **rc version** is on v5.0.0-rc branch
-
-## Nginx Server
+## Nginx Server 配置
 ```
 server {
     listen       8765;
     server_name  _;
 
-    add_header Access-Control-Allow-Origin *;
-        add_header 'Access-Control-Allow-Credentials' 'true';
-        add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
-    root   front-end/page/path;    # e.g. /root/n9e/pub;
-
-    location / {
-        root front-end/page/path;    # e.g. /root/n9e/pub;
-        try_files $uri /index.html;
-    }
-   location /api/ {
-        proxy_pass http://n9e.api.server;   # e.g. 127.0.0.1:18000 
-    }
+    location ~ ^/front_chaineye/ {
+            root html;
+            index  index.html index.htm;
+            try_files $uri $uri/ /front_chaineye/index.html;
+        }        
+    
+	location ~ ^/chaineye/ {
+	    proxy_set_header                Host                            $host;
+            proxy_set_header                X-Real-IP                       $remote_addr;
+            proxy_set_header                X-Forwarded-For                 $proxy_add_x_forwarded_for;
+	    proxy_pass http://127.0.0.1:18000;
+        }
 }
 ```
+## 其他设置
+- [env](.env)文件配置 `VITE_PREFIX = '/front_chaineye'` 配置前端访问路径统一前缀, `VITE_SHOW_MENU = false` 配置左侧菜单栏是否显示, `true`显示。  
+- [request.ts](./src/utils/request.ts)中配置`backendBaseUrl = '/chaineye'`, 即请求后端服务统一添加 `/chaineye` 前缀。需要与链眼(chaineye)后端接口前缀一致。
 
-## Notice
-
+## 注意
 - `vite.config.js` and `tsconfig.json` should both configure to make sure alias works
 - Add `"css.validate": false` in vscode setting.json to ignore the css warning 
 
+## 鸣谢
+[nightingale fe-v5](https://github.com/n9e/fe-v5)
 
