@@ -30,11 +30,11 @@ export default class LineEcharts extends Component {
             },
             tooltip: {
                 show: true,
-                trigger: 'none',
+                trigger: 'axis',
                 axisPointer: {
                     type: 'cross',
                     label: {
-                        show: true
+                        show: false
                     }
                 },
                 formatter: '{b}<br/>交易数：{c}',
